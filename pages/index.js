@@ -65,7 +65,7 @@ const Page = () => {
           </Paragraph>
           <Box alighn="center" my={4}>
             <NextLink href="/works">
-              <Button rightIcon={<ChevronRightIcon />} colorSheme="teal">
+              <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
                 My portfolio
               </Button>
             </NextLink>
