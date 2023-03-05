@@ -6,6 +6,10 @@ import {
   Heading,
   Image,
   Link,
+  List,
+  ListItem,
+  SimpleGrid,
+  Icon,
   useColorModeValue
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
@@ -13,6 +17,14 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
+import { GridItem } from '../components/grid-item'
+import {
+  IoLogoTwitter,
+  IoLogoInstagram,
+  IoLogoGithub,
+  IoLogoDiscord
+} from 'react-icons/io5'
+import thumbYouTube from '../public/images/links/youtube.png'
 
 const Page = () => {
   return (
@@ -83,6 +95,54 @@ const Page = () => {
             <BioYear>2010</BioYear>
             MyBiography
           </BioSection>
+        </Section>
+        <Section delay={0.3}>
+          <Heading as="h3" variant="section-title">
+            I ♥
+          </Heading>
+          <Paragraph>
+            Art, Music,{' '}
+            <Link href="https://illust.odoruinu.net/" target="_blank">
+              Drawing
+            </Link>
+            , Playing Drums,{' '}
+            <Link href="https://500px.com/" target="_blank">
+              Photography
+            </Link>
+            , Leica, Machine Learning
+          </Paragraph>
+        </Section>
+        <Section delay={0.3}>
+          <Heading as="h3" variant="section-title">
+            On the web
+          </Heading>
+          <List>
+            <ListItem>
+              <Link href="https://github.com/Rcf47" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<Icon as={IoLogoGithub} />}
+                >
+                  @vadim
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://twitter.com/" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<Icon as={IoLogoTwitter} />}
+                >
+                  @twitter
+                </Button>
+              </Link>
+            </ListItem>
+          </List>
+          <SimpleGrid columns={[1, 2, 2]} gap={6}>
+            <GridItem href="https://www.youtube.com/devaslife" title="Dev as Life" thumbnail={thumbYouTube}>Youtube channel</GridItem>
+          </SimpleGrid>
         </Section>
       </Container>
     </Layout>
