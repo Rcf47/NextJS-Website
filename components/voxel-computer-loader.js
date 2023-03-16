@@ -17,8 +17,8 @@ export const ComputerContainer = forwardRef(({ children }, ref) => (
     ref={ref}
     className="voxel-computer"
     m="auto"
-    mt={['-20px', '-60px', '-120px']}
-    mb={['-40px', '-140px', '-200px']}
+    mt={['-20px', '-60px', '-100px']}
+    mb={['-40px', '-140px', '-100px']}
     w={[280, 480, 640]}
     h={[280, 480, 640]}
     position="relative"
