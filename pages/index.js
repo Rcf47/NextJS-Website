@@ -10,7 +10,8 @@ import {
   ListItem,
   SimpleGrid,
   Icon,
-  useColorModeValue
+  useColorModeValue,
+  chakra
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Layout from '../components/layouts/article'
@@ -25,6 +26,10 @@ import {
   IoLogoDiscord
 } from 'react-icons/io5'
 import thumbYouTube from '../public/images/links/youtube.png'
+
+const ProfileImage = chakra(Image, {
+  shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
+})
 
 const Page = () => {
   return (
@@ -71,9 +76,9 @@ const Page = () => {
           </Heading>
           <Paragraph>
             Paragraph{' '}
-            <NextLink href="/works/inkdrop">
-              <Link>Inkdrop</Link>
-            </NextLink>
+            <Link as={NextLink} href="/works/inkdrop" passHref scroll={false}>
+              Inkdrop
+            </Link>
           </Paragraph>
           <Box alighn="center" my={4}>
             <NextLink href="/works">
