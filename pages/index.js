@@ -58,16 +58,24 @@ const Page = () => {
             ml={{ md: 6 }}
             align="center"
           >
-            <Image
+            <Box
               borderColor="whiteAlpha.800"
               borderWidth={2}
               borderStyle="solid"
-              maxWidth="100px"
+              w="100px"
+              h="100px"
               display="inline-block"
               borderRadius="full"
-              src="/images/vadim-min.png"
-              alt="Profile Image"
-            />
+              overflow="hidden"
+            >
+              <ProfileImage
+                src="/images/vadim-min.png"
+                alt="Profile Image"
+                borderRadius="full"
+                width="100"
+                height="100"
+              />
+            </Box>
           </Box>
         </Box>
         <Section delay={0.1}>
